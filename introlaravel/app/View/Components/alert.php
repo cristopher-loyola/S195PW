@@ -7,7 +7,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class alert extends Component
-{
+{   
     public $tipo;
     /**
      * Create a new component instance.

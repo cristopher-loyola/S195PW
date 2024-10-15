@@ -6,27 +6,11 @@ use App\Http\Controllers\controladorVistas;
 Route::get('/',[controladorVistas::class,'home'])->name('rutainicio');
 Route::get('/formulario',[controladorVistas::class,'formularios'])->name('rutaformularios');
 Route::get('/clientes',[controladorVistas::class,'consulta'])->name('rutaclientes');
+Route::post('/enviar',[controladorVistas::class,'procesarCliente'])->name('procesar');
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // route::view('/','inicio')->name('rutainicio');

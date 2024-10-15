@@ -11,10 +11,10 @@
         <a class="navbar-brand" href="/">Turista sin Maps</a>
         <div class="container">
             <li class="nav-item">
-                <a class="btn btn-outline-info" href="/formulario">Registro Clientes</a>
+                <a class="nav-link {{request()->routeIs('rutaformularios')?'text-warning':'' }}" href="/formulario">Registro Clientes</a>
               </li>
         <li class="nav-item">
-            <a class="btn btn-outline-info" href="/clientes">Consulta Clientes</a>
+        <a class="nav-link {{request()->routeIs('rutaclientes')?'text-warning':'' }}" href="/clientes">Consulta Clientes</a>
         </li>
         </div>
     </nav>
