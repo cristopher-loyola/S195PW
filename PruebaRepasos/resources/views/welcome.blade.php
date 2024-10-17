@@ -13,7 +13,7 @@
     <h2>Programacion Web</h2>
     <h3>Acividad de repaso 1</h3>
     <br>
-    <a href="/Repaso1" class="btn btn-primary btn-start">Repaso 1</a>
+    <a href="/repaso1" class="btn btn-primary btn-start">Repaso 1</a>
 </div>
 </body>
 </html>
