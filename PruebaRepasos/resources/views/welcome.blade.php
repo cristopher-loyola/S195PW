@@ -12,6 +12,8 @@
     <h1>Cristopher Antonio Loyola Martinez</h1>
     <h2>Programacion Web</h2>
     <h3>Acividad de repaso 1</h3>
+    <h4>Ingenieria en sistemas computacionales</h4>
+    <h4>S195</h4>
     <br>
     <a href="/repaso1" class="btn btn-primary btn-start">Repaso 1</a>
 </div>

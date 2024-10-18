@@ -10,9 +10,27 @@ class controladorVistas extends Controller
     {
         return view('welcome');    
     }
-    public function repaso1()
+    public function repaso1(Request $request)
     {
-        return view('repaso1');
+        $resultado = '';
 
+        if ($request->isMethod('post')) {
+            $input = $request->input('valor');
+            $Conversion = $request->input('conversion');
+
+            if ($Conversion == 'mb_a_gb') {
+                $resultado = $input . ' MB = ' . ($input / 1000) . ' GB';
+            } elseif ($Conversion == 'gb_a_mb') {
+                $resultado = $input . ' GB = ' . ($input * 1000) . ' MB';
+            } elseif ($Conversion == 'gb_a_tb') {
+                $resultado = $input . ' GB = ' . ($input / 1000) . ' TB';
+            } elseif ($Conversion == 'tb_a_gb') {
+                $resultado = $input . ' TB = ' . ($input * 1000) . ' GB';
+            } else {
+                $resultado = 'pide conversión válida';
+            }
+        }
+
+        return view('repaso1', compact('resultado'));
     }
 }
