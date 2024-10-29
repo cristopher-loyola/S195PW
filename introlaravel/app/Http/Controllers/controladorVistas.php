@@ -22,18 +22,19 @@ class controladorVistas extends Controller
 
     }
     public function procesarCliente(Request $peticion)
-    {
-        //return'Llego tu formulario al controlador';
-
-
-        //imprimimos todo lo que vienen en la peticion
-        // return $peticion->all();
-
-        // return $peticion->path();
-
-        //imprime la url completa de la peticion
-        //return$peticion->url();
-
-        return $peticion->ip();
+    {       
+        $validacion = $peticion->validate([
+            'txtnombre' => 'required|min:3|max:255',
+            'txtapellido' => 'required|min:3|max:255',
+            'txtcorreo' => 'required|email:rfc,dns',
+            'txttelefono' => 'required|min:3|max:255'
+        ]);
+        
+        $usuario = $peticion->input('txtnombre');
+        
+        session()->flash('exito', 'Se guardo el usuario: ' .$usuario);
+        
+        return to_route('rutaformularios');
     }
+
 }

@@ -19,9 +19,9 @@
   <form action="{{ route('rutaRepaso1') }}" method="POST">
         @csrf
         <label for="valor">Ingrese el valor:</label>
-        <input type="number" name="valor" id="valor" required>
+        <input type="float" name="valor" id="valor" required>
 
-        <label for="conversion">Seleccione la conversión:</label>
+        <label for="conversion">Seleccione la conversion:</label>
          <select name="conversion" id="conversion">
             <option value="mb_a_gb">MB a GB</option>
             <option value="gb_a_mb">GB a MB</option>
@@ -34,7 +34,7 @@
     
 
     @if (isset($resultado))
-        <h2>Resultado: {{ $resultado }}</h2>
+        <h2> {{ $resultado }}</h2>
     @endif
 
    

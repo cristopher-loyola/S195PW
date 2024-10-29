@@ -15,17 +15,17 @@ class controladorVistas extends Controller
         $resultado = '';
 
         if ($request->isMethod('post')) {
-            $input = $request->input('valor');
+            $input = $request->input('valor');  
             $Conversion = $request->input('conversion');
 
             if ($Conversion == 'mb_a_gb') {
-                $resultado = $input . ' MB = ' . ($input / 1000) . ' GB';
+                $resultado = $input . ' MB = ' . ($input / 1024) . ' GB';
             } elseif ($Conversion == 'gb_a_mb') {
-                $resultado = $input . ' GB = ' . ($input * 1000) . ' MB';
+                $resultado = $input . ' GB = ' . ($input * 1024) . ' MB';
             } elseif ($Conversion == 'gb_a_tb') {
-                $resultado = $input . ' GB = ' . ($input / 1000) . ' TB';
+                $resultado = $input . ' GB = ' . ($input / 1024) . ' TB';
             } elseif ($Conversion == 'tb_a_gb') {
-                $resultado = $input . ' TB = ' . ($input * 1000) . ' GB';
+                $resultado = $input . ' TB = ' . ($input * 1024) . ' GB';
             } else {
                 $resultado = 'pide conversión válida';
             }
