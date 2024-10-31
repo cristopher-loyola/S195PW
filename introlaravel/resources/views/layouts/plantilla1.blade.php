@@ -6,7 +6,7 @@
     @vite(['resources/js/app.js'])
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <title>@yield('titulo')</title>
+    <title>('titulo')</title>
     
 </head>
 <body>
