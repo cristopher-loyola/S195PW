@@ -17,13 +17,22 @@ class controladorVistas extends Controller
             return view('registro');
     
         }
-        public function procesarCliente()
+        public function procesarLibro(Request $peticion)
         {
             $validacion = $peticion->validate([
-                'txtnombre' => 'required|min:3|max:255',
-                'txtapellido' => 'required|min:3|max:255',
-                'txtcorreo' => 'required|email:rfc,dns',
-                'txttelefono' => 'required|min:3|max:255'
+                'txtisbn' => 'required|min:3|max:255',
+                'txttitulo' => 'required|min:3|max:255',
+                'txtautor' => 'required|min:3|max:255',
+                'txtpaginas' => 'required|min:1|max:255',
+                'txtanio' => 'required|min:4|max:255',
+                'txteditorial' => 'required|min:3|max:255',
+                'txtemail' => 'required|email',
             ]);
+
+            $libro = $peticion->input('txttitulo');
+        
+            session()->flash('Todo correcto: Libro guardado');
+            
+            return to_route('rutaregistro');
         }
 }

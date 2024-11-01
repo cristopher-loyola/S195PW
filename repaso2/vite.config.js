@@ -9,3 +9,9 @@ export default defineConfig({
         }),
     ],
 });
+
+import 'alertifyjs/build/css/alertify.css';
+import 'alertifyjs/build/css/themes/default.css';
+import alertify from 'alertifyjs';
+
+window.alertify = alertify;
