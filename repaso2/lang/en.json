@@ -13,9 +13,11 @@
     "Environment file already exists.": "Environment file already exists.",
     "Environment file not found.": "Environment file not found.",
     "errors": "errors",
+    "exito": "sucess",
     "Forbidden": "Forbidden",
     "Formulario de Libros": "Book Form",
     "Go to page :page": "Go to page :page",
+    "guardado con exito": "saved successfully",
     "Hello!": "Hello!",
     "If you did not create an account, no further action is required.": "If you did not create an account, no further action is required.",
     "If you did not request a password reset, no further action is required.": "If you did not request a password reset, no further action is required.",
@@ -39,6 +41,7 @@
     "Registro de Libro": "Book Registration",
     "Reset Password": "Reset Password",
     "Reset Password Notification": "Reset Password Notification",
+    "Respuesta del servidor": "Server response",
     "results": "results",
     "Server Error": "Server Error",
     "Service Unavailable": "Service Unavailable",
@@ -56,8 +59,5 @@
     "Unauthorized": "Unauthorized",
     "Verify Email Address": "Verify Email Address",
     "Whoops!": "Whoops!",
-    "You are receiving this email because we received a password reset request for your account.": "You are receiving this email because we received a password reset request for your account.",
-    "Respuesta del servidor":"Server response",
-    "exito":"sucess",
-    "guardado con exito":"saved successfully"
+    "You are receiving this email because we received a password reset request for your account.": "You are receiving this email because we received a password reset request for your account."
 }

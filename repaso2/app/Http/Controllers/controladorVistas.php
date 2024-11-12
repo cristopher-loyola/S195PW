@@ -31,7 +31,9 @@ class controladorVistas extends Controller
 
             $libro = $peticion->input('txttitulo');
         
-            session()->flash('Todo correcto: Libro guardado');
+            session()->flash('exito', 'Todo correcto: ' . $libro . ' Libro guardado');
+
+
             
             return to_route('rutaregistro');
         }
