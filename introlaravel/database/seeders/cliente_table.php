@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use iluminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 
 class cliente_table extends Seeder
 {
@@ -13,7 +13,7 @@ class cliente_table extends Seeder
      */
     public function run(): void
     {
-        DB::table('clientes_table')->insert([
+        DB::table('clientes')->insert([
             [
                 'nombre'=>'Cristopher',
                 'apellido'=>'Loyola',
