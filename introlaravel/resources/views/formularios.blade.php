@@ -23,7 +23,7 @@
   });
   </script>!}
   @endSession
-    <form action="/enviar" method="POST">
+    <form action="{{ route('procesar')}}" method="POST">
         @csrf
 
         <div class="card-header">

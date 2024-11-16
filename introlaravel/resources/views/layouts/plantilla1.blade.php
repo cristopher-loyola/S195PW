@@ -14,10 +14,10 @@
         <a class="navbar-brand" href="/">Turista sin Maps</a>
         <div class="container">
             <li class="nav-item">
-                <a class="nav-link {{request()->routeIs('rutaformularios')?'text-warning':'' }}" href="/formulario">{{__('Registro de Clientes')}}</a>
+                <a class="nav-link {{request()->routeIs('rutaformularios')?'text-warning':'' }}" href="{{ route('rutaformulario')}}">{{__('Registro de Clientes')}}</a>
               </li>
         <li class="nav-item">
-        <a class="nav-link {{request()->routeIs('rutaclientes')?'text-warning':'' }}" href="/clientes">{{__('Consulta de Clientes')}}</a>
+        <a class="nav-link {{request()->routeIs('rutaclientes')?'text-warning':'' }}" href="{{ route('procesar')}}">{{__('Consulta de Clientes')}}</a>
         </li>
         </div>
     </nav>                  

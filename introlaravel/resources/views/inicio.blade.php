@@ -34,7 +34,7 @@
     <div class="welcome-text">
         <h1>Bienvenido querido Turista</h1>
         <p>Presiona el botón para iniciar...</p>
-        <a href="/formulario" class="btn btn-primary btn-start">¡Comencemos!</a>
+        <a href="{{ route('rutaformulario')}}" class="btn btn-primary btn-start">¡Comencemos!</a>
     </div>
 </body>
 </html>

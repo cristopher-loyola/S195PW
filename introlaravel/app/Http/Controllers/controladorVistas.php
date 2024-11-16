@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+
 class controladorVistas extends Controller
 {
     public function home()
@@ -13,12 +15,12 @@ class controladorVistas extends Controller
 
     public function formularios()
     {
-        return view('formularios');
+ 
 
     }
     public function consulta()
     {
-        return view('clientes');
+        
 
     }
     public function procesarCliente(Request $peticion)
@@ -34,7 +36,7 @@ class controladorVistas extends Controller
         
         session()->flash('exito', 'Se guardo el usuario: ' .$usuario);
         
-        return to_route('rutaformularios');
+        return to_route('rutaformulario');
     }
 
 }
