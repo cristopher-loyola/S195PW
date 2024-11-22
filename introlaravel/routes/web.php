@@ -18,7 +18,17 @@ Route::post('/cliente',[clienteControler::class,'store'])->name('procesar');
 
 Route::get('/cliente',[clienteControler::class,'index'])->name('rutaclientes');
 
-Route::get('/',[controladorVistas::class,'home'])->name('rutainicio');
+Route::get('/',[clienteControler::class,'home'])->name('rutainicio');
+
+
+
+Route::get('/cliente/{id}', [clienteControler::class, 'edit'])->name('editarCliente');
+
+Route::put('/cliente/{id}', [clienteControler::class, 'update'])->name('actualizarCliente');
+
+Route::delete('/cliente/{id}', [clienteControler::class, 'destroy'])->name('eliminarCliente');
+
+
 
 
 

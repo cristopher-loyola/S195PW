@@ -67,18 +67,35 @@ class clienteControler extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     */
+     */ 
     public function edit(string $id)
     {
-        //
+        $cliente = DB::table('clientes')->where('id', $id)->first();
+        return view('editar', compact('cliente'));  
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'txtnombre' => 'required|string|max:255',
+            'txtapellido' => 'required|string|max:255',
+            'txtcorreo' => 'required|email|max:255',
+            'txttelefono' => 'required|string|max:15',
+        ]);
+    
+        DB::table('clientes')->where('id', $id)->update([
+            'nombre' => $validated['txtnombre'],
+            'apellido' => $validated['txtapellido'],
+            'correo' => $validated['txtcorreo'],
+            'telefono' => $validated['txttelefono'],
+            'updated_at' => Carbon::now(),
+        ]);
+    
+        session()->flash('exito', 'Cliente actualizado correctamente.');
+        return redirect()->route('rutaclientes');
     }
 
     /**
@@ -86,6 +103,11 @@ class clienteControler extends Controller
      */
     public function destroy(string $id)
     {
-        //
+    $cliente = DB::table('clientes')->where('id', $id)->first();
+
+    DB::table('clientes')->where('id', $id)->delete();
+
+    session()->flash('exito', 'El cliente ha sido eliminado correctamente.');
+    return redirect()->route('rutaclientes');
     }
 }
