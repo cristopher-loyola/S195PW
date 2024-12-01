@@ -22,11 +22,10 @@ class validadorCliente extends FormRequest
     public function rules(): array
     {
         return [
-                                                 
-    'txtnombre' => 'required|min:4|max:255',
-    'txtapellido' => 'required',
-    'txtcorreo' => 'required',
-    'txttelefono' => 'required|numeric'
+            'txtnombre' => 'required|min:4|max:255',
+            'txtapellido' => 'required|min:2|max:255',
+            'txtcorreo' => 'required|email|max:255',
+            'txttelefono' => 'required|numeric|digits_between:10,15',
         ];
     }
 }
